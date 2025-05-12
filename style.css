@@ -1,0 +1,174 @@
+/* Estilo Clássico Industrial para Landing Page de Impressão 3D */
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte moderna, mas com um toque clássico */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Cinza claro para o fundo, neutro */
+    color: #333; /* Cor de texto principal escura */
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Cabeçalho e Seção Hero */
+.hero-section {
+    background: #333; /* Fundo escuro para impacto industrial */
+    color: #fff; /* Texto claro para contraste */
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 5px solid #c0392b; /* Detalhe em cor de ferrugem/tijolo */
+}
+
+.hero-section h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Botões de Chamada para Ação (CTA) */
+.cta-button {
+    display: inline-block;
+    background-color: #c0392b; /* Cor de ferrugem/tijolo */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid #a93226; /* Borda sutilmente mais escura */
+}
+
+.cta-button:hover {
+    background-color: #a93226; /* Escurece no hover */
+}
+
+/* Seções de Conteúdo */
+.services-section, .contact-section {
+    padding: 40px 0;
+    background-color: #fff; /* Fundo branco para clareza do conteúdo */
+    margin-bottom: 20px; /* Espaçamento entre seções */
+    border-top: 1px solid #ddd; /* Linha divisória sutil */
+}
+
+.services-section h2, .contact-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: #2c3e50; /* Azul acinzentado escuro, remetendo a metal */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.services-section p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+/* Formulário de Contato */
+.contact-section form {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #eAEAEA; /* Fundo levemente acinzentado para o formulário */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 22px); /* Ajuste para padding e borda */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-section .cta-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Rodapé */
+footer {
+    background: #2c3e50; /* Azul acinzentado escuro, como metal */
+    color: #ecf0f1; /* Cor de texto clara para contraste */
+    text-align: center;
+    padding: 25px 0;
+    border-top: 5px solid #c0392b; /* Detalhe em cor de ferrugem/tijolo */
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media(max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .services-section h2, .contact-section h2 {
+        font-size: 1.8em;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group select,
+    .form-group textarea {
+        width: calc(100% - 22px);
+    }
+}
+
