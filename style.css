@@ -1,0 +1,339 @@
+// This is a mock-up of the HTML structure. Actual implementation might vary.
+// Note: Image paths are placeholders and should be updated with actual file paths or URLs.
+
+// Step 1: Define the basic HTML structure (index.html)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Impressão 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo.png" alt="Logo da Empresa" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Soluções Inovadoras em Impressão 3D</h1>
+            <p>Peças sob medida para indústria e automóveis clássicos.</p>
+            <a href="#contact" class="cta-button">Solicite um Orçamento</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="service-item">
+                <img src="images/service1.jpg" alt="Protótipos Rápidos">
+                <h3>Protótipos Rápidos</h3>
+                <p>Transforme suas ideias em realidade com prototipagem rápida e precisa.</p>
+            </div>
+            <div class="service-item">
+                <img src="images/service2.jpg" alt="Peças de Reposição">
+                <h3>Peças de Reposição</h3>
+                <p>Produza peças de reposição sob demanda, mesmo para modelos antigos.</p>
+            </div>
+            <div class="service-item">
+                <img src="images/service3.jpg" alt="Componentes Personalizados">
+                <h3>Componentes Personalizados</h3>
+                <p>Crie componentes únicos e otimizados para suas necessidades específicas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfólio de Projetos</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/project1_thumb.jpg" alt="Projeto 1" data-full_image="images/project1.jpg">
+                    <p>Projeto A</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/project2_thumb.jpg" alt="Projeto 2" data-full_image="images/project2.jpg">
+                    <p>Projeto B</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/project3_thumb.jpg" alt="Projeto 3" data-full_image="images/project3.jpg">
+                    <p>Projeto C</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form action="#" method="post">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit" class="cta-button">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nome da Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+```
+
+
+2.  **CSS Styling (style.css):**
+
+```css
+/* Reset básico e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Fundo cinza claro */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: #c0392b 3px solid;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo img {
+    height: 50px; /* Ajuste conforme necessário */
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+header nav ul li a:hover {
+    color: #c0392b; /* Cor de destaque ao passar o mouse */
+}
+
+/* Seção Hero */
+#hero-section {
+    background: url('path/to/your/hero-image.jpg') no-repeat center center/cover;
+    height: 60vh; /* Altura da seção hero */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+#hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+#hero-section .lead {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/* Seções de Conteúdo */
+.section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Estilização específica para a seção de serviços (cards) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Estilização do Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho total */
+}
+
+form button {
+    background-color: #c0392b; /* Cor principal */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #a52f20; /* Tom mais escuro para hover */
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header .container,
+    .services-grid {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+```
+
+**Explicação do Código:**
+
+*   **HTML (index.html):**
+    *   Define a estrutura básica da página com seções para cabeçalho, hero, serviços, portfólio e contato.
+    *   Usa classes CSS para estilização e organização do layout.
+    *   Inclui um formulário de contato básico (sem funcionalidade de envio real neste exemplo).
+*   **CSS (style.css):**
+    *   **Reset Básico:** Remove margens e preenchimentos padrão para consistência entre navegadores.
+    *   **Estilos Gerais:** Define uma fonte base, cor de texto e fundo para o corpo da página.
+    *   **Container:** Limita a largura do conteúdo principal e o centraliza na página.
+    *   **Cabeçalho e Navegação:** Estiliza o cabeçalho, logo e os links de navegação.
+    *   **Seção Hero:** Define um fundo de imagem e centraliza o conteúdo de destaque.
+    *   **Seções de Conteúdo:** Estiliza os títulos e parágrafos das seções de serviços e portfólio.
+    *   **Grid de Serviços/Portfólio:** Utiliza Flexbox para criar um layout responsivo em grade para os itens de serviço/portfólio.
+    *   **Formulário de Contato:** Estiliza os campos de entrada e o botão de envio para uma aparência limpa e moderna.
+    *   **Rodapé:** Estiliza o rodapé com informações de contato e direitos autorais.
+    *   **Responsividade (Media Queries):** Ajusta o layout para telas menores, garantindo que o site seja navegável em dispositivos móveis.
+
+**Como Usar:**
+
+1.  **Crie os arquivos:** Salve o código HTML como `index.html` e o código CSS como `style.css` na mesma pasta.
+2.  **Personalize o conteúdo:** Substitua os textos de exemplo (`<!-- Seu conteúdo aqui -->`) e os caminhos das imagens (`path/to/your/...`) pelos seus próprios.
+3.  **Adicione suas imagens:** Coloque as imagens que deseja usar nas pastas correspondentes (ex: `images/`) e atualize os caminhos no HTML e CSS, se necessário.
+4.  **Abra no navegador:** Abra o arquivo `index.html` em seu navegador para visualizar a página.
+
+Este é um ponto de partida. Você pode expandir e personalizar este template adicionando mais seções, funcionalidades (como galerias de imagens, sliders, etc.) e ajustando os estilos para atender perfeitamente às suas necessidades. Lembre-se de que a prática leva à perfeição, então experimente e divirta-se criando!Ok, vamos criar um exemplo de código HTML e CSS para uma landing page com foco em um serviço de impressão 3D. Esta página incluirá seções comuns como um cabeçalho com navegação, uma seção de herói, informações sobre os serviços, um portfólio de projetos e um formulário de contato. Para fins de simplicidade e foco no design e estrutura, não incluirei JavaScript para interações complexas, mas o design será responsivo. Salve o código HTML como `index.html` e o CSS como `style.css` no mesmo diretório. Além disso, crie uma pasta chamada `images` e coloque suas imagens lá. Por exemplo, se você tiver um logo, salve-o como `images/logo.png`. Para imagens de portfólio, use nomes como `images/project1.jpg`, `images/project2.jpg`, etc. Se você não tiver imagens, pode usar placeholders como os que eu incluí no código. ### HTML (index.html): ```html <!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Serviços de Impressão 3D de Precisão</title> <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> </head> <body> <header> <nav class="container"> <a href="index.html" id="logo"> <img src="images/logo.png" alt="Logo da Empresa de Impressão 3D"> <!-- Substitua pelo caminho do seu logo --> </a> <ul class="nav-links"> <li><a href="#hero">Início</a></li> <li><a href="#services">Serviços</a></li> <li><a href="#portfolio">Portfólio</a></li> <li><a href="#about">Sobre Nós</a></li> <li><a href="#contact">Contato</a></li> </ul> </nav> </header> <section id="hero"> <div class="hero-content"> <h1>Soluções Inovadoras em Impressão 3D</h1> <p>Transformamos suas ideias em realidade com precisão e qualidade.</p> <a href="#contact" class="btn btn-primary">Solicite um Orçamento</a> </div> </section> <section id="services" class="section-padding"> <div class="container"> <h2 class="section-title">Nossos Serviços</h2> <div class="services-grid"> <div class="service-item"> <img src="images/icon-prototyping.svg" alt="Ícone de prototipagem rápida" class="service-icon"> <h3>Prototipagem Rápida</h3> <p>Criação ágil de protótipos funcionais para validar seus projetos antes da produção em massa.</p> </div> <div class="service-item"> <img src="images/icon-custom-parts.svg" alt="Ícone de peças personalizadas" class="service-icon"> <h3>Peças Personalizadas</h3> <p>Desenvolvemos peças únicas e sob medida para atender às suas necessidades específicas.</p> </div> <div class="service-item"> <img src="images/icon-small-batch.svg" alt="Ícone de pequena tiragem" class="service-icon"> <h3>Pequenas Tiragens</h3> <p>Produção eficiente de pequenas séries de peças com qualidade industrial.</p> </div> <div class="service-item"> <img src="images/icon-design-consulting.svg" alt="Ícone de consultoria em design" class="service-icon"> <h3>Consultoria em Design</h3> <p>Auxiliamos na otimização de seus projetos para impressão 3D, garantindo os melhores resultados.</p> </div> </div> </div> </section> <section id="portfolio" class="section-padding bg-light"> <div class="container"> <h2 class="section-title">Portfólio de Projetos</h2> <div class="portfolio-grid"> <div class="portfolio-item"> <img src="images/project1.jpg" alt="Projeto de Impressão 3D 1"> <p>Projeto Alpha</p> </div> <div class="portfolio-item"> <img src="images/project2.jpg" alt="Projeto de Impressão 3D 2"> <p>Projeto Beta</p> </div> <div class="portfolio-item"> <img src="images/project3.jpg" alt="Projeto de Impressão 3D 3"> <p>Projeto Gamma</p> </div> <div class="portfolio-item"> <img src="images/project4.jpg" alt="Projeto de Impressão 3D 4"> <p>Projeto Delta</p> </div> </div> </div> </section> <section id="about" class="section-padding"> <div class="container"> <h2 class="section-title">Sobre Nós</h2> <p>Somos apaixonados por transformar ideias em realidade através da impressão 3D. Com anos de experiência e um compromisso inabalável com a qualidade, oferecemos soluções personalizadas para uma ampla gama de necessidades. Nossa missão é fornecer peças precisas, duráveis e inovadoras, superando as expectativas de nossos clientes a cada projeto.</p> <p>Utilizamos tecnologia de ponta e materiais de alta qualidade para garantir que cada peça produzida atenda aos mais altos padrões. Seja para prototipagem rápida, produção de pequenas séries ou peças finais complexas, estamos prontos para enfrentar o seu desafio.</p> </div> </section> <section id="contact" class="section-padding bg-light"> <div class="container"> <h2 class="section-title">Entre em Contato</h2> <p>Pronto para iniciar seu próximo projeto ou tem alguma dúvida? Preencha o formulário abaixo ou entre em contato pelos nossos canais.</p> <form action="#" method="POST" class="contact-form"> <div class="form-group"> <label for="name">Nome:</label> <input type="text" id="name" name="name" required> </div> <div class="form-group"> <label for="email">E-mail:</label> <input type="email" id="email" name="email" required> </div> <div class="form-group"> <label for="phone">Telefone (Opcional):</label> <input type="tel" id="phone" name="phone"> </div> <div class="form-group"> <label for="subject">Assunto:</label> <input type="text" id="subject" name="subject" required> </div> <div class="form-group"> <label for="message">Mensagem:</label> <textarea id="message" name="message" rows="5" required></textarea> </div> <button type="submit" class="btn btn-primary">Enviar Mensagem</button> </form> </div> </section> <footer class="text-center"> <p>&copy; 2024 Nome da Empresa | Todos os Direitos Reservados</p> <p> <a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a> </p> </footer> </body> </html> ``` ### CSS (style.css): ```css /* Reset básico e estilos globais */ body { font-family: 
